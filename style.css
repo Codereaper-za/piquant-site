@@ -701,3 +701,22 @@ footer {
     border-radius: 8px; /* optional polish */
   }
 }
+
+/* Social Media Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.social-links a {
+  color: #fff;            /* default icon color */
+  font-size: 1.8rem;      /* icon size */
+  transition: color 0.3s ease;
+  text-decoration: none;  /* remove underline */
+}
+
+.social-links a:hover {
+  color: #ff4c00;         /* chilli accent color */
+}
