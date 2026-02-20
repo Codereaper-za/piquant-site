@@ -94,6 +94,6 @@ function checkoutWhatsApp() {
     return;
   }
   const message = "Hi, I'd like to order: " + cart.join(", ");
-  const whatsappUrl = "https://wa.me/+27648591020?text=" + encodeURIComponent(message);
+  const whatsappUrl = "https://wa.me/+27693237625?text=" + encodeURIComponent(message);
   window.open(whatsappUrl, "_blank");
 }
