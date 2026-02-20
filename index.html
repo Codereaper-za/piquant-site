@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piquant Chilli Sauce</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.jpeg">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-left">
+      <img src="assets/images/logo/logo.jpeg" alt="Piquant Logo" class="logo">
+      <h1 class="site-title">PIQUANT CHILLI SAUCE</h1>
+    </div>
+    <div class="header-right">
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sauces">Sauces</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- Cart Dropdown -->
+          <li class="cart-container">
+            <a href="javascript:void(0)" id="cart-link">🛒 Cart <span id="cart-count">0</span></a>
+            <div id="cart-dropdown" class="cart-dropdown">
+              <h4>Your Cart 🌶️</h4>
+              <ul id="cart-items"></ul>
+              <p class="cart-total">Total: R0.00</p>
+              <button class="buy-btn" onclick="checkoutWhatsApp()">Checkout via WhatsApp</button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <button class="buy-now-btn" onclick="document.getElementById('buy').scrollIntoView({behavior:'smooth'})">
+        Buy Now
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <h2>Keep It Hot As Goosebumps.</h2>
+    <p>Authentic, bold, and fiery flavours straight from Piquant.</p>
+  </section>
+
+  <!-- Sauce Gallery -->
+  <section id="gallery" class="sauce-gallery">
+    <h2 class="sauce-heading">Our Sauces</h2>
+    <div class="sauce-grid">
+      <a href="assets/images/sauce20.jpeg" target="_blank">
+        <img src="assets/images/sauce20.jpeg" alt="Red Sauce">
+      </a>
+      <a href="assets/images/sauce3.jpeg" target="_blank">
+        <img src="assets/images/sauce3.jpeg" alt="Red Sauce">
+      </a>
+      <a href="assets/images/sauce8.jpeg" target="_blank">
+        <img src="assets/images/sauce8.jpeg" alt="Red Sauce">
+      </a>
+      <a href="assets/images/sauce13.jpeg" target="_blank">
+        <img src="assets/images/sauce13.jpeg" alt="Green Sauce">
+      </a>
+      <a href="assets/images/sauce21.jpeg" target="_blank">
+        <img src="assets/images/sauce21.jpeg" alt="Yellow Sauce">
+      </a>
+    </div>
+  </section>
+
+  <!-- Buy Section -->
+  <section id="buy" class="buy">
+    <h2>Buy the Sauce</h2>
+    <p>Choose your favourite flavour and spice up your meals today!</p>
+    
+    <div class="buy-options">
+      <div class="buy-card">
+        <img src="assets/images/sauce4.jpeg" alt="">
+        <h3>Hot Honey Range</h3>
+        <p>Authentic heat with a smooth finish.</p>
+        <p class="price">R20.00 100ML</p>
+        <button class="buy-btn" onclick="addToCart('Hot Honey Range')">Add to Cart</button>
+      </div>
+      
+      <div class="buy-card">
+        <img src="assets/images/sauce21.jpeg" alt="">
+        <h3>Hot Harbenero</h3>
+        <p>A burst of flame wrapped in tasty flavour.</p>
+        <p class="price">R50.00 400ML</p>
+        <button class="buy-btn" onclick="addToCart('Hot Harbenero')">Add to Cart</button>
+      </div>
+
+      <div class="buy-card">
+        <img src="assets/images/sauce20.jpeg" alt="">
+        <h3>BBQ Sticky Wings</h3>
+        <p>Rich, smoky flavour with a fiery kick.</p>
+        <p class="price">R50.00 400ML</p>
+        <button class="buy-btn" onclick="addToCart('BBQ Sticky Wings')">Add to Cart</button>
+      </div>
+
+      <div class="buy-card">
+        <img src="assets/images/sauce11.jpeg" alt="">
+        <h3>Spring Cayenne Mild</h3>
+        <p>Bright white, bold, and full of spice.</p>
+        <p class="price">R20.00 100ML</p>
+        <button class="buy-btn" onclick="addToCart('Spring Cayenne Mild')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <p>
+        At <strong>Piquant Chilli Sauce</strong>, we believe food should be bold, exciting, 
+        and unforgettable. Our sauces are crafted with passion, using fresh, locally sourced 
+        ingredients and traditional recipes passed down through generations.
+      </p>
+      <p>
+        Every bottle is a celebration of flavour — from the fiery kick of our Classic Red 
+        to the smoky depth of our Smoky Red. We’re not just making chilli sauce; we’re 
+        creating experiences that bring people together around the table.
+      </p>
+      <p>
+        Whether you’re a spice lover or just starting your chilli journey, Piquant is here 
+        to add heat, heart, and happiness to your meals.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-content">
+      <div class="contact-item">
+        <span class="contact-icon">📧</span>
+        <p>Email: <a href="mailto:Piquantchillisauce@outlook.com">Piquantchillisauce@outlook.com</a></p>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">📱</span>
+        <p>WhatsApp: <a href="https://wa.me/27648591020" target="_blank">+27 64 859 1020</a></p>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">🌐</span>
+        <p>Follow us on social media for updates and recipes!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Hero -->
+  <footer class="footer-hero">
+    <div class="footer-overlay">
+      <h2>Bring the Heat Home</h2>
+      <p>Authentic flavour, crafted with passion — Piquant Chilli Sauce.</p>
+      <button class="buy-btn" onclick="document.getElementById('buy').scrollIntoView({behavior:'smooth'})">
+        Shop Now
+      </button>
+
+      <!-- Social Media Links -->
+      <div class="social-links">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/Vusi Thindisa" target="_blank" class="social-icon" aria-label="Facebook">
+          <!-- SVG omitted for brevity -->
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/Macchefxvusi" target="_blank" class="social-icon" aria-label="Instagram">
+          <!-- SVG omitted for brevity -->
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@piquant62" target="_blank" class="social-icon" aria-label="TikTok">
+          <!-- SVG omitted for brevity -->
+        </a>
+      </div>
+
+      <p class="footer-copy">&copy; 2026 Piquant Chilli Sauce</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,552 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #ffe5e0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d32f2f;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+  color: #d32f2f;
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-now-btn:hover {
+  background: #a32020;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  background: url('assets/images/sauce14.jpeg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(143, 15, 15, 0.6);
+}
+
+/* Sauce Gallery */
+.sauce-gallery {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sauce-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sauce-grid img {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.sauce-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Buy Section */
+.buy {
+  padding: 40px 20px;
+  text-align: center;
+  background: #d32f2f;
+  color: #fff;
+}
+
+.buy h2 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.buy p {
+  color: #f0f0f0;
+}
+
+.buy-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.buy-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.buy-card:hover {
+  transform: translateY(-5px);
+}
+
+.buy-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.buy-card h3 {
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.buy-card p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.buy-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: #a32020;
+}
+
+/* About Section */
+.about {
+  position: relative;
+  padding: 40px 20px;
+  background: url("assets/images/sauce12.jpeg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  color: #fff; /* makes text readable */
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.551); /* dark overlay */
+  z-index: 1;
+}
+
+.about * {
+  position: relative;
+  z-index: 2; /* keeps text above overlay */
+}
+
+.about h2 {
+  margin-bottom: 15px;
+  color: #d32f2f;
+}
+
+/* Contact Section */
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 15px;
+  color: #d32f2f;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #f0f0f0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* -------------------
+   Cart Dropdown Styles
+------------------- */
+.cart-container {
+  position: relative;
+}
+
+#cart-link {
+  font-weight: bold;
+  color: #d32f2f;
+  cursor: pointer;
+}
+
+#cart-count {
+  background: #d32f2f;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 15px;
+  z-index: 1000;
+}
+
+.cart-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.cart-dropdown ul li {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 6px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-dropdown .buy-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  background: url('assets/images/sauce6.jpeg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.footer-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay for contrast */
+}
+
+.footer-overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+.footer-hero .buy-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-hero .buy-btn:hover {
+  background: #a32020;
+}
+
+.footer-copy {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ffe5e0, #fff3f0);
+}
+
+.contact h2 {
+  margin-bottom: 30px;
+  color: #d32f2f;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-content {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: #d32f2f;
+}
+
+.contact a {
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #a32020;
+  text-decoration: underline;
+}
+
+.footer-hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  background: url('assets/images/sauce13.jpeg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.footer-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+}
+
+.footer-overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+.footer-hero .buy-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-hero .buy-btn:hover {
+  background: #a32020;
+}
+
+.social-links {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #ffe5e0; /* light chilli tone */
+}
+
+.footer-copy {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.social-links {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon svg {
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover svg {
+  transform: scale(1.2);
+  color: #ffe5e0; /* light chilli tone */
+}
+
+.social-links {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon svg {
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover svg {
+  transform: scale(1.2);
+  color: #ffe5e0; /* light chilli tone */
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d32f2f; /* chilli red */
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .sauce-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
