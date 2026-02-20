@@ -680,3 +680,24 @@ footer {
     border-radius: 8px; /* optional: keeps them neat */
   }
 }
+
+/* Sauce grid layout */
+.sauce-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  width: 100%;
+  justify-items: center; /* centers images in their cells */
+}
+
+/* Mobile specific: force 2 columns */
+@media (max-width: 768px) {
+  .sauce-grid {
+    grid-template-columns: repeat(2, 1fr); /* exactly 2 per row */
+  }
+  .sauce-grid img {
+    width: 100%;   /* fills its grid cell */
+    height: auto;
+    border-radius: 8px; /* optional polish */
+  }
+}
