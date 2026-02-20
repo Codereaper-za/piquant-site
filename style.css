@@ -664,3 +664,19 @@ footer {
     text-align: center;
   }
 }
+
+/* Mobile 2-column sauce grid */
+@media (max-width: 768px) {
+  .sauce-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px; /* spacing between images */
+    width: 100%;
+  }
+
+  .sauce-grid img {
+    width: 100%;       /* each image fills its grid cell */
+    height: auto;
+    border-radius: 8px; /* optional: keeps them neat */
+  }
+}
