@@ -550,3 +550,77 @@ footer {
     margin-bottom: 20px;
   }
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Header */
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header-right {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .site-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 60px 15px;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Sauce Gallery */
+  .sauce-grid {
+    gap: 15px;
+    overflow-x: auto;
+    flex-wrap: nowrap; /* keep horizontal scroll */
+  }
+  .sauce-grid img {
+    width: 160px;
+  }
+
+  /* Buy Section */
+  .buy-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  .buy-card {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* Contact Section */
+  .contact-content {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Footer Hero */
+  .footer-hero {
+    padding: 60px 15px;
+  }
+  .footer-hero h2 {
+    font-size: 2rem;
+  }
+  .footer-hero p {
+    font-size: 1rem;
+  }
+}
