@@ -27,14 +27,14 @@
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
           <!-- Cart Dropdown -->
-          <li class="cart-container">
-            <a href="javascript:void(0)" id="cart-link">🛒 Cart <span id="cart-count">0</span></a>
-            <div id="cart-dropdown" class="cart-dropdown">
-              <h4>Your Cart 🌶️</h4>
-              <ul id="cart-items"></ul>
-              <p class="cart-total">Total: R0.00</p>
-              <button class="buy-btn" onclick="checkoutWhatsApp()">Checkout via WhatsApp</button>
-            </div>
+<div class="cart-container">
+  <span id="cart-link">Cart <span id="cart-count">0</span></span>
+  <div id="cart-dropdown" class="cart-dropdown">
+    <h4>Your Cart</h4>
+    <ul id="cart-items"></ul>
+    <div class="cart-total">Total: R0.00</div>
+    <!-- ✅ Corrected function call -->
+    <button class="buy-btn" onclick="checkoutWhatsApp()">Checkout via WhatsApp</button>
           </li>
         </ul>
       </nav>
@@ -73,44 +73,56 @@
   </section>
 
   <!-- Buy Section -->
-  <section id="buy" class="buy">
-    <h2>Buy the Sauce</h2>
-    <p>Choose your favourite flavour and spice up your meals today!</p>
-    
-    <div class="buy-options">
-      <div class="buy-card">
-        <img src="assets/images/sauce4.jpeg" alt="">
-        <h3>Hot Honey Range</h3>
-        <p>Authentic heat with a smooth finish.</p>
-        <p class="price">R20.00 100ML</p>
-        <button class="buy-btn" onclick="addToCart('Hot Honey Range')">Add to Cart</button>
-      </div>
-      
-      <div class="buy-card">
-        <img src="assets/images/sauce21.jpeg" alt="">
-        <h3>Habanero Hot</h3>
-        <p>A burst of flame wrapped in tasty flavour.</p>
-        <p class="price">R50.00 400ML</p>
-        <button class="buy-btn" onclick="addToCart('Habanero Hot')">Add to Cart</button>
-      </div>
+<section id="buy">
+  <h2>Buy the Sauce</h2>
+  <p>Choose your favourite flavour and spice up your meals today!</p>
 
-      <div class="buy-card">
-        <img src="assets/images/sauce20.jpeg" alt="">
-        <h3>BBQ Sticky Wings</h3>
-        <p>Rich, smoky flavour with a fiery kick.</p>
-        <p class="price">R50.00 400ML</p>
-        <button class="buy-btn" onclick="addToCart('BBQ Sticky Wings')">Add to Cart</button>
-      </div>
-
-      <div class="buy-card">
-        <img src="assets/images/sauce11.jpeg" alt="">
-        <h3>Spring Cayenne Mild</h3>
-        <p>Bright white, bold, and full of spice.</p>
-        <p class="price">R20.00 100ML</p>
-        <button class="buy-btn" onclick="addToCart('Spring Cayenne Mild')">Add to Cart</button>
-      </div>
+  <div class="buy-options">
+    <!-- Product 1 -->
+    <div class="buy-card">
+      <img src="assets/images/sauce4.jpeg" alt="Hot Honey Range">
+      <h3>Hot Honey Range</h3>
+      <p>Authentic heat with a smooth finish.</p>
+      <p class="price">R20.00 100ML</p>
+      <button class="buy-btn" onclick="addToCart('Hot Honey Range', 20, 'assets/images/sauce4.jpeg')">
+        Add to Cart
+      </button>
     </div>
-  </section>
+
+    <!-- Product 2 -->
+    <div class="buy-card">
+      <img src="assets/images/sauce21.jpeg" alt="Habanero Hot">
+      <h3>Habanero Hot</h3>
+      <p>A burst of flame wrapped in tasty flavour.</p>
+      <p class="price">R50.00 400ML</p>
+      <button class="buy-btn" onclick="addToCart('Habanero Hot', 50, 'assets/images/sauce21.jpeg')">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="buy-card">
+      <img src="assets/images/sauce20.jpeg" alt="BBQ Sticky Wings">
+      <h3>BBQ Sticky Wings</h3>
+      <p>Rich, smoky flavour with a fiery kick.</p>
+      <p class="price">R50.00 400ML</p>
+      <button class="buy-btn" onclick="addToCart('BBQ Sticky Wings', 50, 'assets/images/sauce20.jpeg')">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="buy-card">
+      <img src="assets/images/sauce11.jpeg" alt="Spring Cayenne Mild">
+      <h3>Spring Cayenne Mild</h3>
+      <p>Bright white, bold, and full of spice.</p>
+      <p class="price">R20.00 100ML</p>
+      <button class="buy-btn" onclick="addToCart('Spring Cayenne Mild', 20, 'assets/images/sauce11.jpeg')">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</section>
 
   <!-- About Section -->
   <section id="about" class="about">
