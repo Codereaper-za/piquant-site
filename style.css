@@ -841,4 +841,38 @@ footer .buy-btn {
 }.remove-btn {
   font-size: 20px;
   padding: 4px;
+}/* Default cart styling (desktop) */
+.cart-dropdown {
+  width: 300px;
+  padding: 15px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .cart-dropdown {
+    width: 90%;          /* expand to almost full screen width */
+    max-width: none;     /* remove any fixed max-width */
+    padding: 12px;       /* keep spacing comfortable */
+    left: 5%;            /* center it horizontally */
+  }
+
+  .cart-thumb {
+    width: 50px;         /* bigger thumbnails for mobile */
+    height: 50px;
+  }
+}/* Default cart styling (desktop) */
+.cart-dropdown {
+  width: 300px;
+  padding: 15px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .cart-dropdown {
+    width: 95%;          /* stretch almost full width */
+    max-width: none;     /* remove fixed max-width */
+    left: 2.5%;          /* center horizontally */
+    right: 2.5%;         /* balance spacing */
+    padding: 12px;       /* keep spacing comfortable */
+  }
 }
