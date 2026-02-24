@@ -876,3 +876,34 @@ footer .buy-btn {
     padding: 12px;       /* keep spacing comfortable */
   }
 }
+
+@media (max-width: 768px) {
+  .cart-dropdown {
+    position: fixed;        /* keep it in place */
+    top: 25%;               /* push it down a bit */
+    left: 25%;              /* push it in from the left */
+    width: 50%;             /* half screen width */
+    height: 50%;            /* half screen height */
+    padding: 15px;
+    box-sizing: border-box; /* keep padding inside */
+    background: #fff;       /* or your gradient */
+    border-radius: 8px;     /* smooth corners */
+    overflow-y: auto;       /* scroll if content overflows */
+    z-index: 9999;          /* stay above other elements */
+  }
+}@media (max-width: 768px) {
+  .cart-dropdown {
+    position: fixed;        /* lock it in place */
+    top: 50%;               /* push to middle vertically */
+    left: 50%;              /* push to middle horizontally */
+    transform: translate(-50%, -50%); /* center perfectly */
+    width: 50%;             /* half screen width */
+    height: 50%;            /* half screen height */
+    padding: 15px;
+    box-sizing: border-box;
+    background: #fff;       /* or your gradient */
+    border-radius: 8px;     /* smooth corners */
+    overflow-y: auto;       /* scroll if content overflows */
+    z-index: 9999;          /* stay above everything */
+  }
+}
